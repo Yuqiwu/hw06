@@ -37,12 +37,24 @@ def root():
 
 @app.route("/result", methods=["GET","POST"])
 def result():
-    season = int(request.form['value'])
-    episode = int(request.form['name'])
+    season = 0
+    if "1episode" in request.form:
+        season = 1
+        episode = int( request.form['1episode'])
+
+    elif  "2episode" in request.form:
+        season = 2
+        episode = int( request.form['2episode'] )
+
+    else:
+        season = 3
+        episode = int(request.form['3episode'])
+        
     print season
     print episode
+
     result = notwalylime.find_season_episode(season, episode)
-    url = episode['url']
+    url = result['url']
     return redirect(url)
 
 if __name__ == "__main__":

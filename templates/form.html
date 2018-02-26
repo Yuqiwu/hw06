@@ -8,24 +8,27 @@
       <h1> Rick and Morty! </h1>
       <br>
       
-      <h3> Season 1 </h3>
+      
       <form action="/result" method="POST">
+	<h3> Season 1 </h3>
 	{% for number in season1 %}
-	<input type="submit" value={{number}} name="1">
+	<input type="submit" value="{{number}}" name= "1episode">
 	{% endfor %}
       </form>
-      
-      <h3> Season 2 </h3>
+	  
       <form action="/result" method="POST">
+      <h3> Season 2  </h3>
+      
 	{% for number in season2 %}
-	<input type="submit" value={{number}} name="2">
+	<input type="submit" value="{{number}}" name="2episode">
 	{% endfor %}
       </form>
-      
-      <h3> Season 3 </h3>
+	  
       <form action="/result" method="POST">
+      <h3> Season 3 </h3>
+      
 	{% for number in season3 %}
-	<input type="submit" value={{number}} name="3">
+	<input type="submit" value= "{{number}}" name="3episode">
 	{% endfor %}
       </form>
     </body>
