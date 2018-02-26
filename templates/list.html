@@ -1,0 +1,32 @@
+<DOCTYPE html>
+  <html>
+    <head>
+      <title> Rick and Morty </title>
+    </head>
+
+    <body>
+      <h1> Rick and Morty! </h1>
+      <br>
+      <form action="/result">
+	<input type="submit">
+	<select>
+	  {% for number in season1 %}
+	  <option value={{number}}> {{number}} </option>
+	  {% endfor %}
+	</select>
+	
+	<select>
+	  {% for number in season2 %}
+	  <option value={{number}}> {{number}} </option>
+	  {% endfor %}
+	</select>
+	
+	<select>
+	  {% for number in season3 %}
+	  <option value={{number}}> {{number}} </option>
+	  {% endfor %}
+	</select>
+      </form>
+    </body>
+  </html>
+	
